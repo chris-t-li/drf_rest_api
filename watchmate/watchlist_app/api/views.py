@@ -82,7 +82,7 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class WatchlistAV(APIView):
-    # permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [IsAdminOrReadOnly]
 
     def get(self, request):
         movies = Watchlist.objects.all()
